@@ -1,0 +1,149 @@
+.hidden {
+  display: none;
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.book__search {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  background-color: white;
+}
+
+input[type="search"] {
+  padding: 5px 5px;
+  border: none;
+  width: 250px;
+  font-size: 16px;
+  max-height: 40px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.book__search input[type="search"]:focus {
+  outline: none;
+}
+
+.book__search button {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.book__select select {
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-height: 40px;
+  font-size: 16px;
+}
+
+.book__select select > option {
+  font-size: 16px;
+}
+
+.books__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+  column-gap: 40px;
+  padding: 0;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+.book__card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 300px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+  list-style-type: none;
+  background-color: var(--light-silver-color);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.book__card:hover {
+  transition: 1s all;
+  transform: scale(1.2);
+}
+
+.book__image {
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.book__title {
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book__author {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+
+.book__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book__price {
+  margin: 10px 0;
+}
+
+.view__btn {
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: var(--sgo-btn);
+  color: var(--white-color);
+}
+
+.view__btn:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
+}

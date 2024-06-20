@@ -1,0 +1,143 @@
+.specific-book {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  justify-content: space-between;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 66.6%;
+  }
+
+  &__image {
+    width: 50%;
+    text-align: center;
+    padding: 0 25px 20px;
+    box-sizing: border-box;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px 5px black;
+
+      &:hover {
+        box-shadow: 0 0 10px 5px black;
+        transition: 0.5s all;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+    & li {
+      font-size: 1.2rem;
+      line-height: 1.3;
+      color: var(--light-silver-color);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+    color: var(--black-color);
+    text-align: center;
+  }
+
+  &__desc {
+    flex-grow: 1;
+    margin: 10px 0 0;
+    padding: 10px;
+
+    &-info {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      color: var(--black-color);
+    }
+  }
+}
+
+.book-cart {
+  width: 250px;
+  height: 200px;
+  border: 3px dotted var(--black-color);
+  border-radius: 20px;
+
+  &__list {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & span {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  & input[type="number"],
+  .btn-count {
+    padding: 4px 6px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  & input[type="number"] {
+    width: 50px;
+  }
+}
+
+.btn-count {
+  background-color: var(--white-color);
+
+  &:hover {
+    background-color: var(--light-silver-color);
+  }
+}
+
+.btn-box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  & .btn-add {
+    padding: 5px 10px;
+    background-color: var(--sgo-btn);
+    color: var(--white-color);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--light-silver-color);
+      color: black;
+    }
+  }
+}

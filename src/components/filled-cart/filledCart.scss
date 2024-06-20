@@ -1,0 +1,47 @@
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  width: 100%;
+  gap: 10px;
+  border-bottom: 3px dotted var(--black-color);
+
+  &__item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    & img {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    & .item-info {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__title {
+        width: 200px;
+      }
+    }
+  }
+
+  &__price {
+    margin-top: 10px;
+    padding-right: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.btn-delete {
+  padding: 0 3px;
+  border-radius: 50%;
+  color: var(--light-silver-color);
+  background-color: var(--black-color);
+  font-size: 0.7rem;
+}
