@@ -44,64 +44,72 @@ export const CartProvider = ({ children }) => {
     saveState(cart);
   }, [cart]);
 
+  const handleTimeout = () => {
+    setIsButtonVisible(false);
+    setTimeout(() => {
+      setMessage("");
+      setError("");
+      setIsButtonVisible(true);
+    }, 5000);
+  };
+
+  const handleExceedError = (book, available) => {
+    setError(
+      `Maximum number of books for ordering - ${book.amount}. Available to order - ${available}`
+    );
+    setMessage("");
+    handleTimeout();
+  };
+
+  const handleSuccess = (newCart) => {
+    setMessage("Book has been added successfully");
+    setError("");
+    handleTimeout();
+    return newCart;
+  };
+
   const addToCart = (book, count) => {
     setCart((prevCart) => {
       // Перевіряємо чи книга вже є в корзині
       const availableBookIndex = prevCart.findIndex(
         (item) => item.book.id === book.id
       );
+
+      const currentCount =
+        availableBookIndex >= 0
+          ? prevCart[availableBookIndex].count
+          : 0;
+      const newCount = currentCount + count;
+
+      if (newCount > book.amount) {
+        const available = book.amount - currentCount;
+        handleExceedError(book, available);
+        return prevCart;
+      }
+
       if (availableBookIndex >= 0) {
         // Оновлюємо кількість книги в корзині
         const updatedCart = prevCart.map((item) =>
           item.book.id === book.id
             ? {
                 ...item,
-                count:
-                  item.count + count > item.book.amount
-                    ? item.count
-                    : item.count + count,
+                count: newCount,
               }
             : item
         );
 
-        const currentCount =
-          updatedCart[availableBookIndex].count;
-        console.log(currentCount);
-        const available = book.amount - updatedCart.count;
-
-        if (currentCount > book.amount) {
-          setError(
-            `Maximum number of books for ordering - ${book.amount}. Books available - ${available}`
-          );
-          setMessage("");
-          setIsButtonVisible(false);
-          setTimeout(() => {
-            setError("");
-            setIsButtonVisible(true);
-          }, 5000);
-          return prevCart;
-        }
-
-        if (!error) {
-          setMessage("Book has been added successfully");
-          setIsButtonVisible(false);
-          setTimeout(() => {
-            setMessage("");
-            setIsButtonVisible(true);
-          }, 5000);
-        }
-
-        console.log(updatedCart);
-        return updatedCart;
+        return handleSuccess(updatedCart);
       } else {
         // Додаємо нову книгу в корзину
-        return [
+        const newCart = [
           ...prevCart,
           {
             book,
             count,
           },
         ];
+
+        return handleSuccess(newCart);
       }
     });
   };
