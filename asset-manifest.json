@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/x-cource-task/static/css/main.c8ac6a26.css",
-    "main.js": "/x-cource-task/static/js/main.7aaac3ea.js",
+    "main.js": "/x-cource-task/static/js/main.72eca3aa.js",
     "static/media/avatar.png": "/x-cource-task/static/media/avatar.0d14c6999b4a5c8e86a7.png",
     "static/media/imageNotFound.png": "/x-cource-task/static/media/imageNotFound.298b98203c3825c61303.png",
     "static/media/cart.svg": "/x-cource-task/static/media/cart.b6eacfb185386f6fe6dd6474ee3fb0fe.svg",
@@ -9,10 +9,10 @@
     "static/media/plus.svg": "/x-cource-task/static/media/plus.1cb1b8668c076d72d442310f867fad63.svg",
     "static/media/minus.svg": "/x-cource-task/static/media/minus.65f051e5dc59ff7055e6c2b994a8ceb3.svg",
     "main.c8ac6a26.css.map": "/x-cource-task/static/css/main.c8ac6a26.css.map",
-    "main.7aaac3ea.js.map": "/x-cource-task/static/js/main.7aaac3ea.js.map"
+    "main.72eca3aa.js.map": "/x-cource-task/static/js/main.72eca3aa.js.map"
   },
   "entrypoints": [
     "static/css/main.c8ac6a26.css",
-    "static/js/main.7aaac3ea.js"
+    "static/js/main.72eca3aa.js"
   ]
 }
