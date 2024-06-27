@@ -56,7 +56,7 @@ export function CartBook({ book }) {
     <div className="book-cart">
       <ul className="book-cart__list">
         <li className="book-cart__item">
-          Price
+          Price:
           <span>${book.price}</span>
         </li>
         <CountControls book={book} />

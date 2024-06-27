@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 import notFoundImage from "../images/imageNotFound.png";
 import "./filledCart.scss";
@@ -24,15 +25,20 @@ export function FilledCart() {
             className="cart-list__item"
             key={item.book.id}
           >
-            <img
-              src={item.book.image || notFoundImage}
-              alt={item.book.title}
-              width="60"
-              height="80"
-            />
+            <Link to={`/specificBook/${item.book.id}`}>
+              <img
+                src={item.book.image || notFoundImage}
+                alt={item.book.title}
+                width="60"
+                height="80"
+              />
+            </Link>
+
             <div className="item-info">
               <div className="item-info__title">
-                <p>{item.book.title}</p>
+                <Link to={`/specificBook/${item.book.id}`}>
+                  {item.book.title}
+                </Link>
               </div>
 
               <div>

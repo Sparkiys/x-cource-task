@@ -15,7 +15,7 @@ export function Cart() {
             <p>Shopping cart</p>
 
             <button
-              className="btn btn-clear"
+              className="btn-clear btn"
               onClick={clearCart}
               disabled={cart.length === 0}
             >
@@ -31,7 +31,7 @@ export function Cart() {
           </div>
 
           <div className="cart__link">
-            <Link className="btn btn-link" to="/bookList">
+            <Link className="btn-link btn" to="/bookList">
               Back to the Booklist
             </Link>
           </div>

@@ -74,24 +74,51 @@ export function CountControls({ book }) {
         />
       </li>
       <li className="book-cart__item">
-        Total price
+        Total price:
         <span>${totalPrice}</span>
       </li>
 
-      {message && (
-        <p style={{ color: "green" }}>{message}</p>
-      )}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-
       <li className="btn-box">
-        {isButtonVisible && (
+        {/* {isButtonVisible && (
           <button
             className="btn btn-add"
             onClick={handleAddToCart}
           >
             Add to cart
           </button>
-        )}
+        )} */}
+
+        <button
+          className="btn btn-add"
+          onClick={handleAddToCart}
+        >
+          {isButtonVisible ? (
+            <>Add to cart</>
+          ) : (
+            <>
+              {message && (
+                <p
+                  style={{
+                    color: "green",
+                    wordWrap: "break-word",
+                  }}
+                >
+                  {message}
+                </p>
+              )}
+              {error && (
+                <p
+                  style={{
+                    wordWrap: "break-word",
+                    color: "red",
+                  }}
+                >
+                  {error}
+                </p>
+              )}
+            </>
+          )}
+        </button>
       </li>
     </>
   );

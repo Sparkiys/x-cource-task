@@ -50,7 +50,7 @@ export const CartProvider = ({ children }) => {
       setMessage("");
       setError("");
       setIsButtonVisible(true);
-    }, 5000);
+    }, 2000);
   };
 
   const handleExceedError = (book, available) => {

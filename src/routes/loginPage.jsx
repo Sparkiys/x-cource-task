@@ -35,26 +35,34 @@ export function LoginPage() {
           <label className="username-label" htmlFor="name">
             Username:
           </label>
-          <input
-            className="username-input"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
-            required
-            value={isLogin ? username : localUsername}
-            onChange={handleChange}
-          />
-          <button
-            onClick={handleSignInClick}
-            className="btn sgi-btn"
-            disabled={
-              localUsername.length < 4 ||
-              localUsername.length > 16
-            }
-          >
-            Sign-in
-          </button>
+
+          {isLogin ? (
+            <p>{username}</p>
+          ) : (
+            <>
+              {" "}
+              <input
+                className="username-input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+                required
+                value={isLogin ? username : localUsername}
+                onChange={handleChange}
+              />
+              <button
+                onClick={handleSignInClick}
+                className="btn sgi-btn"
+                disabled={
+                  localUsername.length < 4 ||
+                  localUsername.length > 16
+                }
+              >
+                Sign-in
+              </button>
+            </>
+          )}
         </form>
       </div>
     </section>

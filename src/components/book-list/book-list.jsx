@@ -12,25 +12,25 @@ export function BookList() {
 
   return (
     <section className="container">
-      <div>
-        <div className="book">
-          <SearchBook
-            handleFilterChange={handleFilterChange}
-          />
-          <CustomSelect
-            handleFilterChange={handleFilterChange}
-          />
-        </div>
-        <ul className="books__list">
-          {filteredItems.length !== 0 ? (
-            filteredItems.map((book) => (
-              <Book book={book} key={book.id} />
-            ))
-          ) : (
-            <p>No results</p>
-          )}
-        </ul>
+      <div className="book">
+        <SearchBook
+          handleFilterChange={handleFilterChange}
+        />
+        <CustomSelect
+          handleFilterChange={handleFilterChange}
+        />
       </div>
+      <ul className="books__list">
+        {filteredItems.length !== 0 ? (
+          filteredItems.map((book) => (
+            <Book book={book} key={book.id} />
+          ))
+        ) : (
+          <div className="books__none">
+            <p>No results</p>
+          </div>
+        )}
+      </ul>
     </section>
   );
 }

@@ -1,11 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useBooks } from "../../hooks";
-import notFoundImage from "../images/imageNotFound.png";
 import "./specificBook.scss";
 import { CartBook } from "./cartBook";
+import { useImage } from "../../hooks/useImage";
 
 export function SpecificBook() {
   /*   const [book, setBook] = useState({}); */
+
   const { books } = useBooks();
   const { id } = useParams();
   const book = books.find((elem) => elem.id === Number(id));
@@ -14,14 +15,19 @@ export function SpecificBook() {
     return <p>Book not found</p>;
   }
 
+  const { imageSrc, handleImageError } = useImage({
+    book,
+  });
+
   return (
     <section className="container">
       <div className="specific-book">
         <div className="specific-book__container">
           <div className="specific-book__image">
             <img
-              src={book.image || notFoundImage}
+              src={imageSrc}
               alt={book.title}
+              onError={handleImageError}
             />
           </div>
           <ul className="specific-book__info">

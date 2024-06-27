@@ -17,10 +17,11 @@ import { BooksProvider } from "../hooks/useBooks";
 import { CartProvider } from "../hooks/useCart";
 
 import "./App.scss";
+import { PrivateRoute } from "../hooks";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/x-cource-task">
       <BooksProvider>
         <CartProvider>
           <LoginProvider>
@@ -29,13 +30,28 @@ function App() {
                 <Route index element={<LoginPage />} />
                 <Route
                   path="bookList"
-                  element={<BookList />}
+                  element={
+                    <PrivateRoute>
+                      <BookList />
+                    </PrivateRoute>
+                  }
                 />
                 <Route
                   path="specificBook/:id"
-                  element={<SpecificBook />}
+                  element={
+                    <PrivateRoute>
+                      <SpecificBook />
+                    </PrivateRoute>
+                  }
                 />
-                <Route path="cart" element={<Cart />} />
+                <Route
+                  path="cart"
+                  element={
+                    <PrivateRoute>
+                      <Cart />
+                    </PrivateRoute>
+                  }
+                />
 
                 <Route
                   path="*"

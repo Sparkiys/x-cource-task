@@ -1,10 +1,12 @@
 .cart-list {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  margin-top: 20px;
+  padding: 20px 20px;
   width: 100%;
   gap: 10px;
   border-bottom: 3px dotted var(--black-color);
+  border-top: 3px dotted var(--black-color);
 
   &__item {
     display: flex;
@@ -15,6 +17,10 @@
     & img {
       object-fit: cover;
       border-radius: 10px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 
     & .item-info {
@@ -24,7 +30,12 @@
       justify-content: space-between;
 
       &__title {
+        padding-left: 20px;
         width: 200px;
+
+        &:hover {
+          color: var(--light-silver-color);
+        }
       }
     }
   }
@@ -36,12 +47,41 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  @media screen and (max-width: 480px) {
+    & {
+      &__item {
+        flex-direction: column;
+
+        & img {
+          width: 100px;
+          height: 120px;
+        }
+      }
+
+      & .item-info {
+        flex-direction: column;
+        gap: 10px;
+
+        &__title {
+          text-align: center;
+          padding-left: 0;
+        }
+      }
+    }
+  }
 }
 
 .btn-delete {
-  padding: 0 3px;
+  order: 0;
+  padding: 5px 8px;
   border-radius: 50%;
   color: var(--light-silver-color);
   background-color: var(--black-color);
   font-size: 0.7rem;
+
+  &:hover {
+    color: var(--black-color);
+    background-color: var(--light-silver-color);
+  }
 }
