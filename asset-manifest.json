@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/x-cource-task/static/css/main.54d52bdf.css",
-    "main.js": "/x-cource-task/static/js/main.93052ba2.js",
+    "main.js": "/x-cource-task/static/js/main.f88308d3.js",
     "static/media/Cameroon-Sacred-Natural-Sites-and-Biodiversity.png": "/x-cource-task/static/media/Cameroon-Sacred-Natural-Sites-and-Biodiversity.98ecbe750e9a7ec875e0.png",
     "static/media/avatar.png": "/x-cource-task/static/media/avatar.0d14c6999b4a5c8e86a7.png",
     "static/media/imageNotFound.png": "/x-cource-task/static/media/imageNotFound.298b98203c3825c61303.png",
@@ -12,10 +12,10 @@
     "static/media/minus.svg": "/x-cource-task/static/media/minus.65f051e5dc59ff7055e6c2b994a8ceb3.svg",
     "static/media/menu.svg": "/x-cource-task/static/media/menu.03bd017439311a00c79ea9c3c5901739.svg",
     "main.54d52bdf.css.map": "/x-cource-task/static/css/main.54d52bdf.css.map",
-    "main.93052ba2.js.map": "/x-cource-task/static/js/main.93052ba2.js.map"
+    "main.f88308d3.js.map": "/x-cource-task/static/js/main.f88308d3.js.map"
   },
   "entrypoints": [
     "static/css/main.54d52bdf.css",
-    "static/js/main.93052ba2.js"
+    "static/js/main.f88308d3.js"
   ]
 }
