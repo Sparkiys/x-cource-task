@@ -58,7 +58,9 @@ export function Header() {
                 <li className="nav__link">
                   <Link
                     to="/cart"
-                    onClick={closeBurgerMenuHandler}
+                    onClick={
+                      isOpen ? closeBurgerMenuHandler : ""
+                    }
                   >
                     <img src={card} width="42" alt="cart" />
 
@@ -74,7 +76,12 @@ export function Header() {
                     className="btn sgo-btn"
                     onClick={() => {
                       handleSignOut();
-                      closeBurgerMenuHandler();
+
+                      {
+                        isOpen
+                          ? closeBurgerMenuHandler()
+                          : "";
+                      }
                     }}
                   >
                     Sing-Out
@@ -84,7 +91,9 @@ export function Header() {
                   <Link
                     to="/"
                     className="user-avatar"
-                    onClick={closeBurgerMenuHandler}
+                    onClick={
+                      isOpen ? closeBurgerMenuHandler : ""
+                    }
                   >
                     {username}
                   </Link>

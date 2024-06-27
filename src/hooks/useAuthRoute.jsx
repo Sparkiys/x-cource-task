@@ -7,12 +7,7 @@ export const PrivateRoute = ({ children }) => {
   const location = useLocation();
 
   if (!isLogin) {
-    return (
-      <Navigate
-        to="x-cource-task"
-        state={{ from: location }}
-      />
-    );
+    return <Navigate to="/" state={{ from: location }} />;
   }
 
   return children;

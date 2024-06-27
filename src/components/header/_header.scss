@@ -53,6 +53,8 @@
       }
 
       & span {
+        text-align: center;
+
         padding: 2px 6px;
         border-radius: 50%;
         background-color: var(--black-color);
@@ -147,10 +149,10 @@
         }
 
         & span {
-          padding: 6px 12px;
+          padding: 6px 10px;
           position: absolute;
           top: -25px;
-          left: 30%;
+          left: 25%;
           font-size: 2rem;
         }
       }

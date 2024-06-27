@@ -2,6 +2,7 @@ import {
   BrowserRouter,
   Route,
   Routes,
+  useLocation,
 } from "react-router-dom";
 
 import {
@@ -17,7 +18,8 @@ import { BooksProvider } from "../hooks/useBooks";
 import { CartProvider } from "../hooks/useCart";
 
 import "./App.scss";
-import { PrivateRoute } from "../hooks";
+import { PrivateRoute, ScrollToTop } from "../hooks";
+import { useEffect } from "react";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
       <BooksProvider>
         <CartProvider>
           <LoginProvider>
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<LoginPage />} />
