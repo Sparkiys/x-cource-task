@@ -25,12 +25,10 @@
       max-width: 100%;
       height: auto;
       border-radius: 20px;
-      box-shadow: 5px 5px 5px 5px black;
+      box-shadow: 4px 4px 15px 4px black;
 
       &:hover {
         box-shadow: 0 0 10px 5px black;
-        transition: 0.5s all;
-        transform: scale(1.2);
       }
     }
   }
@@ -79,6 +77,12 @@
       &__image,
       &__info {
         width: 100%;
+      }
+
+      &__image {
+        & img:hover {
+          transform: scale(1);
+        }
       }
 
       &__info {

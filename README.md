@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Book-store (X-course-task)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contetns
 
-## Available Scripts
+- [Table of Contetns](#table-of-contetns)
+- [About The App](#about-the-app)
+- [Live Demo](#live-demo)
+- [Features](#features)
+  - [For Shoppers](#for-shoppers)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Demo](#demo)
 
-In the project directory, you can run:
+## About The App
 
-### `npm start`
+Discover the best place to shop for programming books at Book-store. The Book-store offers a wide range of programming books that will help you get started in the world of IT. Our user-friendly app provides a seamless shopping experience on any device with a responsive design that adapts perfectly to all screen sizes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Click here](https://sparkiys.github.io/x-cource-task)
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### For Shoppers
 
-### `npm run build`
+- **Shop with Ease:** Browse our extensive catalog of books and make purchases with just a few taps.
+- **Save for Later:** Not ready to buy? Add items to your cart and decide later.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React and TypeScript:** Built a dynamic and responsive frontend.
+- **[SCSS/SASS](https://sass-lang.com/):** Utilized for all design features, enhancing the UI with minimalistic and responsive styles.
+- **[React Router](https://reactrouter.com/en/main):** Implemented for seamless navigation between pages.
+- **[React Hook Form](https://www.react-hook-form.com/):** Employed for robust form validation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+Ensure that you have at least [Node.JS](https://nodejs.org/en) version 18.0.0 installed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the repository with the following command:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Sparkiys/x-cource-task.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install all dependencies by running:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+Start the app with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Demo
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![screenshot1](/demo/demo1.png)
+![screenshot2](/demo/demo2.png)
+![screenshot3](/demo/demo3.png)
+![screenshot4](/demo/demo4.png)
+![screenshot5](/demo/demo5.png)
+![screenshot6](/demo/demo6.png)

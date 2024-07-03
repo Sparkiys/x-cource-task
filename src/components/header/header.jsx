@@ -111,12 +111,6 @@ export function Header() {
         ) : (
           ""
         )}
-        {/* <button
-          className="burger-toggle"
-          onClick={openBurgerMenuHandler}
-        >
-          {isOpen ? "Close" : "Menu"}
-        </button> */}
       </div>
     </header>
   );

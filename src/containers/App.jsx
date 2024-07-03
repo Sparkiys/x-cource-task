@@ -2,7 +2,6 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  useLocation,
 } from "react-router-dom";
 
 import {
@@ -11,6 +10,9 @@ import {
   LoginPage,
   Cart,
 } from "../routes";
+
+import { PrivateRoute, ScrollToTop } from "../hooks";
+
 import { BookList } from "../components/book-list";
 import { SpecificBook } from "../components/specific-book";
 import { LoginProvider } from "../hooks/useLogin";
@@ -18,8 +20,6 @@ import { BooksProvider } from "../hooks/useBooks";
 import { CartProvider } from "../hooks/useCart";
 
 import "./App.scss";
-import { PrivateRoute, ScrollToTop } from "../hooks";
-import { useEffect } from "react";
 
 function App() {
   return (

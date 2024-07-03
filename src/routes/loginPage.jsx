@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PropTypes } from "prop-types";
 import avatar from "../components/images/avatar.png";
 import { useLogin } from "../hooks";
@@ -7,6 +7,8 @@ import { useLogin } from "../hooks";
 export function LoginPage() {
   const { username, handleSignIn, isLogin } = useLogin();
   const [localUsername, setLocalUsername] = useState("");
+
+  const [usernameError, setUsernameError] = useState("");
 
   // Отримуємо об'єкт історії
   const navigate = useNavigate();
@@ -24,7 +26,16 @@ export function LoginPage() {
 
   // Обробник зміни значення поля введення
   const handleChange = (event) => {
-    setLocalUsername(event.target.value);
+    const value = event.target.value;
+    setLocalUsername(value);
+
+    if (value.length < 4 || value.length >= 16) {
+      setUsernameError(
+        "Username must be between 4 and 16 characters."
+      );
+    } else {
+      setUsernameError("");
+    }
   };
 
   return (
@@ -50,14 +61,15 @@ export function LoginPage() {
                 required
                 value={isLogin ? username : localUsername}
                 onChange={handleChange}
+                maxLength={16}
               />
+              {usernameError && (
+                <p className="error">{usernameError}</p>
+              )}
               <button
                 onClick={handleSignInClick}
                 className="btn sgi-btn"
-                disabled={
-                  localUsername.length < 4 ||
-                  localUsername.length > 16
-                }
+                disabled={!!usernameError}
               >
                 Sign-in
               </button>

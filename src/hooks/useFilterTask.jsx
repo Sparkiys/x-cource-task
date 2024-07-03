@@ -40,7 +40,6 @@ export function useFilterTask(books) {
       }
     }
     setFilteredItems(filtered);
-    console.log(filtered);
   };
 
   // Функція для фільтрації елементів

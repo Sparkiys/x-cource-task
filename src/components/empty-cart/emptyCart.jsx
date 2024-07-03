@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import cart from "../images/svg/cart.svg";
 import "./emptyCart.scss";
 

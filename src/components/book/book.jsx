@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { PropTypes } from "prop-types";
 import { Link, useNavigate } from "react-router-dom";
 import "./book.scss";
@@ -13,7 +13,6 @@ export function Book({ book }) {
     navigate(`/specificBook/${book.id}`);
   };
 
-  console.log(book);
   return (
     <>
       <li className="book__item">

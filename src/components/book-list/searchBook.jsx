@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
-import { useBooks } from "../../hooks";
-import { useFilterTask } from "../../hooks/useFilterTask";
 
 export function SearchBook({ handleFilterChange }) {
   const [searchTerm, setSearchTerm] = useState("");

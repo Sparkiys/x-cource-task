@@ -5,8 +5,6 @@ export function useImage({ book }) {
   const initialImage = book && book.image ? book.image : "";
   const [imageSrc, setImageSrc] = useState(initialImage);
 
-  console.log(book);
-
   const handleImageError = () => {
     if (imageSrc !== notFoundImage) {
       setImageSrc(notFoundImage);

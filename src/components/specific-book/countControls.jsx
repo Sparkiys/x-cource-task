@@ -47,6 +47,16 @@ export function CountControls({ book }) {
       setCount(value);
       setTotalPrice((value * initialPrice).toFixed(2));
     }
+
+    useEffect(() => {
+      setTimeout(() => {
+        if (value > 42) {
+          setError("Max count of book 42");
+        } else {
+          setError("");
+        }
+      }, 2000);
+    });
   };
 
   const handleBlur = () => {
@@ -72,6 +82,16 @@ export function CountControls({ book }) {
           increment={increment}
           maxAmount={book.amount}
         />
+        {error && (
+          <p
+            style={{
+              wordWrap: "break-word",
+              color: "red",
+            }}
+          >
+            {error}
+          </p>
+        )}
       </li>
       <li className="book-cart__item">
         Total price:

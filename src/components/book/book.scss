@@ -117,7 +117,7 @@ input[type="search"]::-webkit-search-results-decoration {
   flex-direction: column;
   justify-content: space-between;
 
-  &__card:hover {
+  &:hover {
     transition: 1s all;
     transform: scale(1.2);
   }
