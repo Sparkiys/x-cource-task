@@ -57,9 +57,9 @@ npm run dev
 
 ## Demo
 
-![screenshot1](/demo/demo1.png)
-![screenshot2](/demo/demo2.png)
-![screenshot3](/demo/demo3.png)
-![screenshot4](/demo/demo4.png)
-![screenshot5](/demo/demo5.png)
-![screenshot6](/demo/demo6.png)
+![screenshot1](public/demo/demo1.png)
+![screenshot2](public/demo/demo2.png)
+![screenshot3](public/demo/demo3.png)
+![screenshot4](public/demo/demo4.png)
+![screenshot5](public/demo/demo5.png)
+![screenshot6](public/demo/demo6.png)
